@@ -28,7 +28,6 @@ public class QuestaoInverterString {
             //ATRAVÉS DO MÉTODO charAt(index) conseguimos recuperar a letra que está no devido índice
             stringInvertida += palavra.charAt(i); // Adiciona o caractere à string invertida
         }
-
         return stringInvertida;
     }
 
