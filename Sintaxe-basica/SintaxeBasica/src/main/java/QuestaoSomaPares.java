@@ -1,4 +1,4 @@
-public class QuestaoSomaPaares {
+public class QuestaoSomaPares {
     //Implemente um método que receba dois números inteiros a e b e retorne a
     // soma de todos os números pares entre a e b (inclusive).
     //Regras:

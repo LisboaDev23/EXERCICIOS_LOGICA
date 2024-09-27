@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class QuestaoInverterString {
     //Implemente um método que receba uma string como argumento e retorne a string invertida.
     //
@@ -14,13 +10,30 @@ public class QuestaoInverterString {
         String[] listLetras = palavra.split("");
         //percorrer todas as letras
         String stringInvertida = "";
-        for (int i = listLetras.length-1; i <= 0; i--){
-
+        int count = 1;
+        for (int i = 0; i < listLetras.length; i++){
+            stringInvertida+= listLetras[listLetras.length-count];
+            count++;
         }
         return stringInvertida;
     }
 
+    //MELHORIA FORNECIDA PELO CHATGPT
+    public static String inverterStringGPT(String palavra) {
+        // String para armazenar o resultado da string invertida
+        String stringInvertida = "";
+
+        // Percorre a string do último caractere até o primeiro
+        for (int i = palavra.length() - 1; i >= 0; i--) {
+            //ATRAVÉS DO MÉTODO charAt(index) conseguimos recuperar a letra que está no devido índice
+            stringInvertida += palavra.charAt(i); // Adiciona o caractere à string invertida
+        }
+
+        return stringInvertida;
+    }
+
     public static void main(String[] args) {
-        System.out.println(inverterString("SIM"));
+        System.out.println(inverterString("GABRIEL"));
+        System.out.println(inverterStringGPT("GABRIEL"));
     }
 }
