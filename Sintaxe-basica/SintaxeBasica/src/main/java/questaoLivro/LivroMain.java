@@ -1,4 +1,4 @@
-package questaoLivro;
+package QuestaoLivro;
 
 import java.util.Scanner;
 
