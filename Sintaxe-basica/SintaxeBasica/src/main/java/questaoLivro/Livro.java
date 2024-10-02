@@ -36,18 +36,18 @@ public class Livro {
         this.numeroDePaginas = numeroDePaginas;
     }
 
-    public void exibirDetalhes(Livro livro){
-        System.out.println("Título: " + livro.getTitulo());
-        System.out.println("Autor: " + livro.getAutor());
-        System.out.println("Número de páginas: " + livro.getNumeroDePaginas());
+    public void exibirDetalhes(){
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Autor: " + getAutor());
+        System.out.println("Número de páginas: " + getNumeroDePaginas());
     }
 
-    public void adicionarPaginas(Livro livro){
+    public void adicionarPaginas(){
         Scanner teclado = new Scanner(System.in);
         System.out.println("Quantas páginas você deseja adicionar ao livro?");
         Integer qtdPaginas = teclado.nextInt();
-        livro.setNumeroDePaginas(getNumeroDePaginas() + qtdPaginas);
-        System.out.println(qtdPaginas + " páginas foram adicionadas ao livro: " + livro.getTitulo());
-        System.out.println("Agora o livro tem " + livro.getNumeroDePaginas() + " páginas!");
+        setNumeroDePaginas(getNumeroDePaginas() + qtdPaginas);
+        System.out.println(qtdPaginas + " páginas foram adicionadas ao livro: " + getTitulo());
+        System.out.println("Agora o livro tem " + getNumeroDePaginas() + " páginas!");
     }
 }

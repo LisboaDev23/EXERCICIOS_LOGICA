@@ -7,13 +7,15 @@ public class LivroMain {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Insira o título do livro que você quer cadastrar:");
         String titulo = teclado.nextLine();
-        System.out.println("Insira o autor do livro:");
-        String autor = teclado.nextLine();
         System.out.println("Insira a quantidade de páginas que o livro tem:");
         Integer qtdPaginas = teclado.nextInt();
+        teclado.nextLine();
+        System.out.println("Insira o autor do livro:");
+        String autor = teclado.nextLine();
+
         Livro livroCadastrado = new Livro(titulo, autor, qtdPaginas);
 
-        livroCadastrado.exibirDetalhes(livroCadastrado);
-        livroCadastrado.adicionarPaginas(livroCadastrado);
+        livroCadastrado.exibirDetalhes();
+        livroCadastrado.adicionarPaginas();
     }
 }
